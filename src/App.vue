@@ -1,60 +1,43 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
+    <v-container fill-height>
     <v-main>
-      <HelloWorld/>
+      <h1 class="white--text my-8">文字カウンター for Twitter</h1>
+      <p class="white--text my-4">文字数をカウントします。ツイート前の文字数確認に便利です。</p>
+      <v-textarea
+        dense
+        single-line
+        v-model.trim="tweet"
+        background-color="#ffffff"
+        rounded
+        outlined
+        rows="10"
+        required
+        label="いまどうしてる？"
+        maxlength="140"
+        class="mx-10"
+      ></v-textarea>
+      <h2 class="white--text mb-4">あと{{ 140 - tweet.length}}文字入力できます。</h2>
     </v-main>
+    </v-container>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-
 export default {
-  name: 'App',
+  name: "App",
 
-  components: {
-    HelloWorld,
-  },
+  components: {},
 
   data: () => ({
-    //
+    tweet: ""
   }),
 };
 </script>
+
+<style>
+#app {
+  text-align: center;
+  background-color: #00aced;
+}
+</style>

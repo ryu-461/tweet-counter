@@ -22,7 +22,8 @@
         elevation="6"
         color="white"
         x-large href="https://twitter.com/"
-        target="blank">ツイートしてみる？</v-btn>
+        target="blank"
+        class="mt-4">ツイートしてみる？</v-btn>
     </v-main>
     </v-container>
   </v-app>

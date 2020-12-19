@@ -8,7 +8,7 @@
         dense
         single-line
         v-model.trim="tweet"
-        background-color="#ffffff"
+        background-color="white"
         rounded
         outlined
         rows="10"
@@ -17,7 +17,12 @@
         maxlength="140"
         class="mx-10"
       ></v-textarea>
-      <h2 class="white--text mb-4">あと{{ 140 - tweet.length}}文字入力できます。</h2>
+      <h2 class="white--text mb-4">あと{{ 140 - tweet.length}}文字入力できます</h2>
+      <v-btn
+        elevation="6"
+        color="white"
+        x-large href="https://twitter.com/"
+        target="blank">ツイートしてみる？</v-btn>
     </v-main>
     </v-container>
   </v-app>

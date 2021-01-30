@@ -2,7 +2,8 @@
   <v-app>
     <v-container fill-height>
     <v-main>
-      <h1 class="white--text my-8">文字カウンター for Twitter  <font-awesome-icon :icon="['fab','twitter']"/></h1>
+      <h1 class="white--text my-4">文字カウンター for Twitter  <font-awesome-icon :icon="['fab','twitter']"/></h1>
+      <v-divider class="white mb-6 mx-9"></v-divider>
       <h2 class="white--text mb-4">あと{{ 140 - tweet.length}}文字入力できます</h2>
       <v-textarea
         dense

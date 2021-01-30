@@ -3,6 +3,7 @@
     <v-container fill-height>
     <v-main>
       <h1 class="white--text my-8">文字カウンター for Twitter  <font-awesome-icon :icon="['fab','twitter']"/></h1>
+      <h2 class="white--text mb-4">あと{{ 140 - tweet.length}}文字入力できます</h2>
       <v-textarea
         dense
         single-line
@@ -16,7 +17,6 @@
         maxlength="140"
         class="mx-10"
       ></v-textarea>
-      <h2 class="white--text mb-4">あと{{ 140 - tweet.length}}文字入力できます</h2>
       <v-btn
         elevation="6"
         color="white"

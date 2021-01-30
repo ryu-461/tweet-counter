@@ -3,7 +3,6 @@
     <v-container fill-height>
     <v-main>
       <h1 class="white--text my-8">文字カウンター for Twitter  <font-awesome-icon :icon="['fab','twitter']"/></h1>
-      <p class="white--text my-4">文字数をカウントします。ツイート前の文字数確認に便利です。</p>
       <v-textarea
         dense
         single-line
